@@ -17,7 +17,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="apple-mobile-web-app-title" content="Plastic Battle" />
     <title>Plastic Battle</title>
-    <script type="module" crossorigin src="/preview/assets/index-B8AiQajV.js"></script>
+    <script type="module" crossorigin src="/preview/assets/index-u98eXY-w.js"></script>
     <link rel="stylesheet" crossorigin href="/preview/assets/index-CI0cLaaa.css">
   </head>
   <body>
@@ -30,7 +30,15 @@
         style="position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:#f3e9df;color:#3a4326;font-family:system-ui,-apple-system,sans-serif"
       >
         <div style="text-align:center">
-          <div style="font-size:22px;font-weight:800;letter-spacing:0.5px">Plastic Battle</div>
+          <!-- Referenced here (not just in the React loader) so the browser fetches
+               the logo the instant the HTML parses — before the JS bundle and the big
+               3D assets — so it appears almost immediately. Vite rewrites the /logo.jpg
+               path to include the base (e.g. /preview/) at build time. -->
+          <img
+            src="/preview/logo.jpg"
+            alt="Plastic Battle"
+            style="width:min(82vw,560px);height:auto;display:block"
+          />
           <div style="margin-top:14px;font-size:14px;opacity:0.75">Loading…</div>
         </div>
       </div>
