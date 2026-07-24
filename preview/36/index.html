@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/preview/36/favicon.svg" />
+    <link rel="apple-touch-icon" href="/preview/36/apple-touch-icon.png" />
+    <!-- maximum-scale + user-scalable=no suppress Safari's double-tap and pinch
+         zoom so battlefield gestures act in-game; viewport-fit=cover lets us
+         respect the iPad safe-area insets (references/ipad-traps.md). -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#6b8f3a" />
+    <!-- iOS "Add to Home Screen" wants its own meta tags, not only the manifest. -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Plastic Battle" />
+    <title>Plastic Battle</title>
+    <script type="module" crossorigin src="/preview/36/assets/index-BtDUxJae.js"></script>
+    <link rel="stylesheet" crossorigin href="/preview/36/assets/index-Cnee0FvQ.css">
+  </head>
+  <body>
+    <div id="root">
+      <!-- Shown the instant the page paints, before any JavaScript has downloaded, so
+           the screen is never blank while the app code loads. React replaces it (with
+           the real 0–100% loader) as soon as it mounts. Same background colour, so the
+           hand-off is seamless. -->
+      <div
+        style="position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:#f3e9df;color:#3a4326;font-family:system-ui,-apple-system,sans-serif"
+      >
+        <div style="text-align:center">
+          <!-- Referenced here (not just in the React loader) so the browser fetches
+               the logo the instant the HTML parses — before the JS bundle and the big
+               3D assets — so it appears almost immediately. Vite rewrites the /logo.jpg
+               path to include the base (e.g. /preview/) at build time. -->
+          <img
+            src="/preview/36/logo.jpg"
+            alt="Plastic Battle"
+            style="width:min(82vw,560px);height:auto;display:block;-webkit-mask-image:linear-gradient(to right,transparent,#000 4%,#000 96%,transparent),linear-gradient(to bottom,transparent,#000 4%,#000 96%,transparent);mask-image:linear-gradient(to right,transparent,#000 4%,#000 96%,transparent),linear-gradient(to bottom,transparent,#000 4%,#000 96%,transparent);-webkit-mask-composite:source-in;mask-composite:intersect"
+          />
+          <div style="margin-top:14px;font-size:14px;opacity:0.75">Loading…</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
