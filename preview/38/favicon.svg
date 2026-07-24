@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Placeholder app icon for M0. Army-green field with a cream star emblem.
+       David replaces this with the real artwork later; it exists so the PWA has
+       valid, correctly sized icons and stays installable. -->
+  <rect width="512" height="512" fill="#3e5220"/>
+  <circle cx="256" cy="256" r="150" fill="none" stroke="#eef2dd" stroke-width="18"/>
+  <path fill="#eef2dd" d="M256 136 L284.2 217.2 L370.1 218.9 L301.7 270.8 L326.5 353.1 L256 304 L185.5 353.1 L210.3 270.8 L141.9 218.9 L227.8 217.2 Z"/>
+</svg>
